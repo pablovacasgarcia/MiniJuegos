@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ahorcado</title>
+    <script src="index.js"></script>
+    
+  </head>
+
+  <body>
+    <style>
+      body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family:'Courier New', Courier, monospace
+      }
+
+      h1{
+        font-size: 400%;
+      }
+      
+      #letras>button{
+        width: 30px;
+        height: 30px;
+      }
+
+      span{
+        font-size: 400%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+      }
+
+      span>button{
+        width: 300px;
+        height: 50px;
+        margin-top: 20px;
+        border-radius: 20px;
+        background-color: aliceblue;
+      }
+      
+
+      #intentos{
+        font-size: 120%;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+      }
+    </style>
+
+    <h1>Ahorcado</h1>
+    <p id="intentos">Intentos: </p>
+    <div id="letras">
+      <button>a</button>
+      <button>b</button>
+      <button>c</button>
+      <button>d</button>
+      <button>e</button>
+      <button>f</button>
+      <button>g</button>
+      <button>h</button>
+      <button>i</button>
+      <button>j</button>
+      <button>k</button>
+      <button>l</button>
+      <button>m</button>
+      <button>n</button>
+      <button>ñ</button>
+      <button>o</button>
+      <button>p</button>
+      <button>q</button>
+      <button>r</button>
+      <button>s</button>
+      <button>t</button>
+      <button>u</button>
+      <button>v</button>
+      <button>w</button>
+    </div>
+    <div id="palabra">
+      <span id="palabraSpan"></span>
+    </div>
+
+  </body>
+</html>

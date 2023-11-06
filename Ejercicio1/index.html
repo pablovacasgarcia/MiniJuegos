@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cronómetro</title>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <!-- CSS (Efectos visuales) -->
+    <style>
+      
+        @font-face {
+            font-family: "Digit";
+            src: url(DS-DIGIT.TTF);
+        }
+
+      body {
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 400%;
+          font-family: "Digit";
+          color: rgb(223, 7, 7);
+          background: linear-gradient(skyblue,white);
+      }
+
+      .marco {
+          border-radius: 30px;
+          background: black;
+          padding: 30px;
+          border: 5px solid rgb(168, 19, 19);
+          width: 300px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      #minutos{
+        position: absolute;
+        left: 44.7%;
+        width: 30px;
+      }
+
+      #segundos {
+        position: absolute;
+        left: 51%;
+        width: 30px;
+      }
+
+      .botones {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 20px;
+      }
+
+      .btn {
+          cursor: pointer;
+          display: inline-block;
+          font-size: 60%;
+          padding: 20px;
+          margin-left: 20px;
+          margin-right: 20px;
+      }
+
+      #iniciar{
+        background-image: url(play.webp);
+        background-position: center;
+        background-size: contain;
+      }
+
+      #pausar{
+        background-image: url(pause.png);
+        background-position: center;
+        background-size: contain;
+      }
+
+      #reiniciar{
+        background-image: url(restart.png);
+        background-position: center;
+        background-size: contain;
+      }
+
+    </style>
+
+
+    <div class="marco">
+      <div class="tiempo">
+        <span id="minutos">00</span>
+        <span>:</span>
+        <span id="segundos">00</span>
+      </div>
+      <div class="botones">
+        <div class="btn" id="iniciar">
+        </div>
+        <div class="btn" id="pausar">
+        </div>
+        <div class="btn" id="reiniciar">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

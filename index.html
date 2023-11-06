@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniJuegos</title>
+</head>
+<body>
+    <style>
+        img{
+            width: 500px;
+            margin: 0px;
+            border: 1px solid black;
+            box-shadow: 1px 1px 3px black;
+            border-radius: 20px;
+        }
+
+        img:hover{
+            box-shadow: 1px 1px 10px black;
+        }
+
+        a{
+            margin: 10px;
+            margin-bottom: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover>h3{
+            text-decoration: underline;
+            color: rgb(67, 67, 67);
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: antiquewhite;
+        }
+
+        section{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+    </style>
+    <h1>Mini Juegos</h1>
+    <section>
+        <a href="Ejercicio1/index.html">
+            <img src="img/clock.png" alt="reloj">
+            <h3>Cronómetro</h3>
+        </a>
+        <a href="Ejercicio2/index.html">
+            <img src="img/Ahorcado.png" alt="ahorcado">
+            <h3>Ahorcado</h3>
+        </a>
+        <a href="Ejercicio3/index.html">
+            <img src="img/pairs.png" alt="parejas">
+            <h3>Parejas</h3>
+        </a>
+        <a href="Ejercicio4/index.html">
+            <img src="img/Lista.png" alt="lista">
+            <h3>Lista de la compra</h3>
+        </a>
+    </section>
+</body>
+</html>
