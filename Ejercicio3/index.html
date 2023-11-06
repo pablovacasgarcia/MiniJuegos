@@ -14,6 +14,7 @@
         flex-direction: column;
         align-items: center;
         background: linear-gradient(rgb(250, 104, 104),white);
+        background-repeat:no-repeat;
         font-family:'Courier New', Courier, monospace;
         text-shadow: 3px 3px 3px gray;
       }
@@ -54,6 +55,25 @@
         transition: transform 1s;
         transform-style: preserve-3d;
       }
+
+      #reiniciar{
+        width: 400px;
+        background-color: gray;
+        color: rgb(255, 255, 255);
+        border: 2px solid rgb(250, 104, 104);
+        border-radius: 20px;
+        margin-top: 30px;
+        text-align: center;
+        font-size: 400%;
+        height: 100px;
+        padding-top: 30px;
+      }
+
+      #reiniciar:hover{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+      }
     </style>
     <h1>Pairs Game</h1>
     <section>
@@ -68,7 +88,7 @@
       <div></div>
       <div></div>
     </section>
-
+    <p id="reiniciar">Reiniciar</p>
 
   </body>
 </html>

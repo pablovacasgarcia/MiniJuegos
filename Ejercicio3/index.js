@@ -1,9 +1,11 @@
 window.onload=()=>{
     divs=document.querySelectorAll("div");
+    reiniciar=document.getElementById("reiniciar");
 
     for(let i=0; i<divs.length; i++){
         divs[i].addEventListener("click", girar)
     }
+    reiniciar.addEventListener("click", ()=>{location.reload(); jugar()});
 
     jugar();
     pulsados=0;
@@ -12,6 +14,7 @@ window.onload=()=>{
 
 function jugar(){
     array=[]
+    reiniciar.style.display="none"
 
     for(let i=0; i<5; i++){
         array.push(i+"A");
@@ -22,6 +25,7 @@ function jugar(){
 
     for (let i=0; i<divs.length; i++){
         divs[i].id=array[i];
+        divs[i].style.display="initial";
     }
 }
 
@@ -75,6 +79,7 @@ function girar(e){
             pulsado1.id="resuelto"
             pulsado2.id="resuelto"
             div.removeEventListener("click", girar)
+            comprobarResuelto()
         } else {
             pulsado1.addEventListener("click", girar)
             pulsado2.addEventListener("click", girar)
@@ -82,6 +87,24 @@ function girar(e){
 
         pulsados=0;
     }
+
     
+}
+
+function comprobarResuelto(){
+    resueltos=0;
+    for(let i=0; i<divs.length; i++){
+        if (divs[i].id=="resuelto"){
+            resueltos++;
+        }
+    }
+
+    if(resueltos==divs.length){
+        for(let i=0; i<divs.length; i++){
+            divs[i].style.display="none";
+        }
+        reiniciar.style.display="block"
+    }
+
     
 }
